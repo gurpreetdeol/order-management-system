@@ -16,5 +16,5 @@ async def test_registration():
     }
     async with AsyncClient(app=app, base_url="http://test") as ac:
         response = await ac.post("/user/", json=data)
-    
+
     assert response.status_code == 201

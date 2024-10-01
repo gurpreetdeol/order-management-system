@@ -11,7 +11,7 @@ class ShowCartItems(BaseModel):
     created_date: datetime.datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ShowCart(BaseModel):
@@ -19,4 +19,4 @@ class ShowCart(BaseModel):
     cart_items: List[ShowCartItems] = []
 
     class Config:
-        orm_mode = True
+        from_attributes = True
